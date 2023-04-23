@@ -2,7 +2,7 @@ import unittest
 import csv
 import sys
 sys.path.insert(0, '../src')
-from extract import extract_data
+from extract_utils import extract_csv
 
 class TestExtract(unittest.TestCase):
     
@@ -11,7 +11,7 @@ class TestExtract(unittest.TestCase):
         
     def test_extract_data(self):
         # execute the extract_data function
-        data = extract_data(self.input_file)
+        data = extract_csv(self.input_file)
         # check that the data is a list
         self.assertIsInstance(data, list)
         # check that the first element of the data in the list is a dict
