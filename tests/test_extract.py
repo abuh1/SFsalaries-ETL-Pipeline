@@ -2,7 +2,7 @@ import unittest
 import csv
 import sys
 sys.path.insert(0, '../src')
-from extract_utils import extract_csv
+from utils.extract_utils import extract_csv
 
 class TestExtract(unittest.TestCase):
     
