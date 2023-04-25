@@ -19,7 +19,7 @@ def extract_json(input_file):
 def extract_sqlite(db_file, table_name):
     conn = sqlite3.connect(db_file)
     cursor = conn.cursor()
-    cursor.execute(f"SELCT * FROM {table_name}")
+    cursor.execute(f"SELECT * FROM {table_name}")
     data = [row for row in cursor]
     conn.close()
     return data

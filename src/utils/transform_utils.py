@@ -1,23 +1,22 @@
 import os
 import pandas as pd
-from extract_utils import extract_csv, extract_json, extract_sqlite
+from src.utils.extract_utils import extract_csv, extract_json, extract_sqlite
 
 # dictionary to map file extensions to extract functions
 extract_functions = {
     '.csv' : extract_csv,
-    '.json' : extract_csv,
+    '.json' : extract_json,
     '.sqlite' : extract_sqlite,
     '.db' : extract_sqlite,
     '.db3' : extract_sqlite,
 }
 
-def load_data(input_file, file_type, table_name=''):
+def load_data(input_file, table_name=''):
     """
     Load data from a file into a pandas dataframe.
     
     Args:
         input_file (str): Path to the input file.
-        file_type (str): Type of file (csv, json, sqlite, mysql, or postgresql).
         table_name (str): Used for sqlite db only. Specify the table name by including 'table_name={table_name}' when calling this function.
         
     Returns:
