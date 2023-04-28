@@ -43,3 +43,16 @@ def load_data(input_file, table_name=''):
     # load data into pandas dataframe
     df = pd.DataFrame(data)
     return df
+
+# takes list of columns from df to convert to a dtype
+def convert_column_type(df, cols, type):
+    pass
+
+# drops specified columns from the df
+def drop_columns(df, cols):
+    pass
+
+# drops specified rows from the df
+def drop_rows(df, cols):
+    pass
+
