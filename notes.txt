@@ -1,0 +1,2 @@
+move load data into extract utils. fix all tests and stuff. 
+main pipeline uses extract load data. then calls transform utils. then calls transform. then calls load. stick to structure
