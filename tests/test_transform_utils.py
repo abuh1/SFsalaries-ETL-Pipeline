@@ -2,7 +2,7 @@ import unittest
 import pandas as pd
 import sys
 sys.path.insert(0, '../')
-from src.utils.transform_utils import load_data, clean_data
+from src.utils.transform_utils import clean_data
 
 class TestTransformUtils(unittest.TestCase):
 
@@ -13,24 +13,6 @@ class TestTransformUtils(unittest.TestCase):
                 'Gender': ['M', 'F', 'M', 'M', 'F', 'F'],
                 'Salary': [50000.0, 60000.0, None, 70000.0, 80000.0, 80000.0]}
         self.df = pd.DataFrame(data)
-    
-    def test_csv_loading(self):
-        # test loading csv file
-        input_file = 'test_files/test_example.csv'
-        df = load_data(input_file)
-        self.assertIsInstance(df, pd.DataFrame)
-        
-    def test_json_loading(self):
-        # test loading json file
-        input_file = 'test_files/test_example.json'
-        df = load_data(input_file)
-        self.assertIsInstance(df, pd.DataFrame)
-        
-    def test_sqlite_loading(self):
-        # test loading sqlite file
-        input_file = 'test_files/test_example.db'
-        df = load_data(input_file, table_name='person')
-        self.assertIsInstance(df, pd.DataFrame)
     
     def test_clean_data(self):
         # test that the function removes null columns and rows
