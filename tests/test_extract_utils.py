@@ -1,7 +1,7 @@
 import unittest
 import pandas as pd
 import sys
-sys.path.insert(0, '../src')
+sys.path.insert(0, '../')
 from utils.extract_utils import load_data
 
 class TestExtract(unittest.TestCase):

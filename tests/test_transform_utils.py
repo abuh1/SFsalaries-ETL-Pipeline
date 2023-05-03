@@ -2,7 +2,7 @@ import unittest
 import pandas as pd
 import sys
 sys.path.insert(0, '../')
-from src.utils.transform_utils import clean_data
+from utils.transform_utils import clean_data
 
 class TestTransformUtils(unittest.TestCase):
 
