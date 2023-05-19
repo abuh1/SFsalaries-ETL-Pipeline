@@ -25,4 +25,7 @@ df = clean_data(df, cols_to_drop=['Agency', 'Notes', 'Status'], dropna_subset=['
 df, agg_df = transform(df)
 
 # load data
-load(df, agg_df, 'data/output/salaries.sqlite')
+output_location = 'data/output/salaries.sqlite'
+load(df, agg_df, output_location)
+print(f"Load complete. Output file location: {output_location}")
+print("Dataframe head:\n", df.head())
